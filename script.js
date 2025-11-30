@@ -28,6 +28,27 @@ function exibir_na_tela(tag, texto) {
     campo.innerHTML = texto;
 }
 
+let numero = 7;
+palavra_maior_menor = numero > 5 ? "maior" : "menor";
+
+let mensagem = `O número ${numero} é ${palavra_maior_menor} que 5`;
+
 function chamada_funcao() {
     exibir_na_tela(".titulo-2", "Testando função");
+    exibir_na_tela('.mensagem', mensagem);
+}
+
+/*****função limpar campo preenchido */
+
+function teste_botao() {
+    let numero_digitado = document.querySelector('.input-number').value;
+    let mensagem_teste_botao = `Você digitou ${numero_digitado}`;
+    
+    exibir_na_tela('.exemplo-limpar-campo', mensagem_teste_botao);
+    // removendo atributo 'disabled' do botão com id 'reiniciar'
+    document.getElementById('reiniciar').removeAttribute('disabled');
+}
+
+function limpar_campo() {
+
 }
