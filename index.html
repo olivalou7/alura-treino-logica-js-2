@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -37,6 +38,17 @@
         <button onclick="teste_botao()">Clicar</button>
         <button id="reiniciar" onclick="limpar_campo()" disabled>Limpar Campo</button>
         <p class="exemplo-limpar-campo"></p>
+    </div>
+
+    <div class="box-array">
+        <h2>Array</h2>
+        <p class="numero-escolhido"></p>
+        <button onclick="gerar_numero_aleatorio()">Gerar número aleatório</button>
+    </div>
+
+    <div class="box-array">
+        <input class="numero-digitado" type="number">
+        <button onclick="adicionar_numero()">Adicione um número no array</button>
     </div>
 </body>
 </html>

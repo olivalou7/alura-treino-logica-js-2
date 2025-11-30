@@ -54,3 +54,33 @@ function limpar_campo() {
     numero_digitado.value = "";
     document.getElementById('reiniciar').setAttribute('disabled', true);
 }
+
+/*****gerar número aleatório e array */
+let listaNumeros = [];
+
+function gerar_numero_aleatorio() {
+    let numeroEscolhido = parseInt(Math.random() * 10 + 1);
+    if(listaNumeros.includes(numeroEscolhido)) {
+        return gerar_numero_aleatorio();
+    } else {
+        listaNumeros.push(numeroEscolhido);
+        document.querySelector('.numero-escolhido').innerHTML = numeroEscolhido;
+        console.log(listaNumeros);
+    }
+}
+
+/******adicionar número no array */
+let lista_numeros_2 = [];
+function adicionar_numero() {
+    let numero_digitado = document.querySelector('.numero-digitado').value;
+    //função 'includes' vê se o número digitado já está na lista(array)
+    if(lista_numeros_2.includes(numero_digitado)) {
+        document.querySelector('.numero-digitado').value = '';
+    } else {
+        //função push adiciona o número digitado na lista
+        lista_numeros_2.push(numero_digitado);
+        console.log(lista_numeros_2);
+        document.querySelector('.numero-digitado').value = '';
+    }
+
+}
