@@ -50,5 +50,7 @@ function teste_botao() {
 }
 
 function limpar_campo() {
-
+    let numero_digitado = document.querySelector('.input-number');
+    numero_digitado.value = "";
+    document.getElementById('reiniciar').setAttribute('disabled', true);
 }
