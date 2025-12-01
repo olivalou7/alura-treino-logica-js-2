@@ -73,14 +73,24 @@ function gerar_numero_aleatorio() {
 let lista_numeros_2 = [];
 function adicionar_numero() {
     let numero_digitado = document.querySelector('.numero-digitado').value;
-    //função 'includes' vê se o número digitado já está na lista(array)
-    if(lista_numeros_2.includes(numero_digitado)) {
-        document.querySelector('.numero-digitado').value = '';
-    } else {
-        //função push adiciona o número digitado na lista
-        lista_numeros_2.push(numero_digitado);
-        console.log(lista_numeros_2);
-        document.querySelector('.numero-digitado').value = '';
-    }
+    //limitar numeros que serão adicionados no array
+    let quantidade_elementos_lista = lista_numeros_2.length;
 
+    if(quantidade_elementos_lista == 5) {
+        exibir_na_tela('.aviso-limite-numeros', "Não pode adicionar mais números");
+    } else {
+        //função 'includes' vê se o número digitado já está na lista(array)
+        if(lista_numeros_2.includes(numero_digitado)) {
+            document.querySelector('.numero-digitado').value = '';
+        } else {
+            //função push adiciona o número digitado na lista
+            lista_numeros_2.push(numero_digitado);
+            console.log(lista_numeros_2);
+            document.querySelector('.numero-digitado').value = '';
+        }
+    }
+}
+
+function remover_ultimo_item_lista() {
+    
 }
