@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
     <link rel="stylesheet" href="estilo.css">
     <script src="script.js" defer></script>
+    <title>Document</title>
 </head>
 <body>
     <!--queeySelector-->
@@ -47,9 +48,16 @@
     </div>
 
     <div class="box-array">
-        <p class="aviso-limite-numeros"></p>
+        <p class="aviso-numeros"></p>
         <input class="numero-digitado" type="number">
         <button onclick="adicionar_numero()">Adicione um número no array</button>
+        <button onclick="remover_ultimo_item_lista()">Remova o último número do array</button>
+    </div>
+
+    <div class="box-voice">
+        <h2>Voice Speak</h2>
+        <p></p>
+        <button onclick="ouvir_voz()">Clicar para ouvir a voz</button>
     </div>
 </body>
 </html>

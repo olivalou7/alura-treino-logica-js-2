@@ -76,8 +76,8 @@ function adicionar_numero() {
     //limitar numeros que serão adicionados no array
     let quantidade_elementos_lista = lista_numeros_2.length;
 
-    if(quantidade_elementos_lista == 5) {
-        exibir_na_tela('.aviso-limite-numeros', "Não pode adicionar mais números");
+    if(quantidade_elementos_lista == 3) {
+        exibir_na_tela('.aviso-numeros', "Não pode adicionar mais números");
     } else {
         //função 'includes' vê se o número digitado já está na lista(array)
         if(lista_numeros_2.includes(numero_digitado)) {
@@ -92,5 +92,12 @@ function adicionar_numero() {
 }
 
 function remover_ultimo_item_lista() {
-    
+    lista_numeros_2.pop();
+    exibir_na_tela('.aviso-numeros', "Número removido com sucesso");
+}
+
+function ouvir_voz() {
+    //https://responsivevoice.org/api/
+    let texto = "Esse é um texto que está sendo lido"
+    responsiveVoice.speak(texto, 'Brazilian Portuguese Female', {rate:1.2});
 }
